@@ -1,0 +1,20 @@
+p {
+    text-align: left;
+    margin: 3em;
+    padding-bottom: 20px;
+    font-family: "Arial", sans-serif; 
+}
+
+.me {
+    float: left;
+    display: block;
+    padding-right: 2rem;
+    margin-bottom: 3em;
+}
+
+.flex {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1100px;
+}

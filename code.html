@@ -1,0 +1,117 @@
+<!— Laura Rapp, HTML (WEB 55041) CSCI 1145, 11/21/21 —>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Code</title>
+    <link rel="stylesheet" type="text/css" href="css/code.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyfy.css">
+    <link rel="stylesheet" type="text/css" href="css/mobileMainMenu.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+<body>
+
+   <div id="logo">
+      <a href="index.html">
+        <img src="img/logo.png"  height="200">
+      </a>
+    </div>
+
+    <div class="name">
+      <h1>Laura Rapp</h1>
+    </div>
+
+    <header class="header">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+      <ul class="menu">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="code.html">Code</a></li>
+        <li><a href="womentech.html">Forbidden Fruit</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </header>
+    
+<pre class="prettyprint">
+public class Main {
+
+    public static void main(String[] args)
+    {
+        HoldingTank tank = new HoldingTank (350, 1000);
+        tank.print();
+        tank.add (350);
+        tank.drain(100);
+        tank.print();
+        tank.add (800);
+        tank.drain (175);
+        tank.print();
+        tank.drain (1200);
+        tank.add (900);
+        tank.drain(25);
+        tank.print();
+    }
+}
+</pre>
+  <pre class="prettyprint">
+
+package edu.cscc;
+import java.lang.Math;
+
+public class HoldingTank {
+    private int current, maxCapacity; // number of gallons in water tank, and maximum number of gallons of water the tank can hold
+
+    public HoldingTank (int current, int maxCapacity) //Constructor
+    {
+        this.current = current; //this references the correct object if there are duplicate variables, i.e. here this.current is set equal to the int provided in main (350)
+        this.maxCapacity = maxCapacity;
+
+        if (this.current > maxCapacity) {  // if current is > maxCapacity, it will be set to maxCapacity
+            this.current = maxCapacity;
+        }
+    }
+
+    public int getCurrent() //Getters
+    {
+        return current;
+    }
+
+    public int getMaxCapacity()
+    {
+        return maxCapacity;
+    }
+
+    public void add (int volume)
+    {
+        this.current += volume; // current = current + volume
+        if (this.current > this.maxCapacity) { // if the result of current is > maxCapacity, the result = maxCapacity
+            this.current = maxCapacity;
+        }
+    }
+
+    public void drain (int volume)
+    {
+        this.current -= volume; // current = current - volume
+        if (this.current < 0) { // if the result of current is < 0, current = zero
+            this.current = 0;
+        }
+    }
+
+    public void print ()
+    {
+        System.out.println ("The tank volume is " + this.current + " gallons");
+    }
+}
+      </pre>
+
+    <div class="linkedin">
+      <a href="https://www.linkedin.com/in/laura-rapp1" target="_blank" rel="noopener noreferrer">
+        <div id="link-icon">
+          <img src="img/linkedin.png">
+        </div>
+      </a>
+    </div>
+
+</body>
+</html>

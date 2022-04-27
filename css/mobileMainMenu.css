@@ -1,0 +1,170 @@
+a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Mobile menu */
+header {
+    background-color: #000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+/* Mobile menu */
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+/* Mobile menu */
+.header ul a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #000;
+    text-align: center;
+}
+
+.header ul a:hover {color: #ff00ed;}
+
+
+/* Hamburger menu*/
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* Hamburger menu*/
+.header .menu-icon {
+    padding: 28px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Hamburger menu*/
+.header .menu-icon .nav-icon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+/* Hamburger menu*/
+.header .menu-icon .nav-icon:before {
+    background: #fff;
+    content:"";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+}
+
+/* Hamburger menu (creating the lines)*/
+.header .menu-icon .nav-icon:after {
+    background: #fff;
+    content:"";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+}
+
+/*Hides checkbox*/
+.header .menu-btn {display: none;}
+
+/* when input is in a checked state, select the next ~ with class of menu (open hamburger)*/
+.header .menu-btn:checked ~ .menu {max-height: 240px;}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {background: transparent;}
+
+
+/* transition from hamburger to X */
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+@media (min-width: 71.25em) {
+    .header ul {
+        text-align: center;
+        padding: 7.8px;
+    }    
+
+    .header li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .header .menu {
+        max-height: none;
+    }
+  
+    .header .menu-icon {display: none;}
+}
+
+/* image logo */
+#logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
+    padding-bottom: 1px;
+    cursor: pointer;
+}
+
+#logo-link-contain {
+    width: 210px;
+    height: 210px;
+}
+
+#logo-img {
+    position: absolute;
+    
+}
+/* name logo */
+.name {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Bungee Shade", sans-serif;
+    font-size: 30px;
+    width: 100%;
+    line-height: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", serif;
+}
+
+.linkedin {
+    background: #000;
+    position: fixed;
+    clear: both;
+    bottom: 0;
+    width: 100%;
+}
+
+#link-icon {
+    padding-top: .5em;
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+}

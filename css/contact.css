@@ -1,0 +1,37 @@
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: block;
+    text-align: left;
+    padding:3rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    margin-top: 4em;
+    margin-bottom: 12em;
+    background-color: #ffff00;
+    box-shadow: 1em 5px 15px 2px red, 18px 8px 58px 8px red, 54px 35px 34px 24px #ff00ed, 80px 50px 60px 4px #0743ff;              
+}
+
+.input-field {
+    width: 400px;
+    height: 43px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #000;
+    color: #000;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+
+.btn {
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #000;
+    text-transform: uppercase;
+}

@@ -1,0 +1,24 @@
+img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.art {
+  margin: 0 auto;
+  width: 600px;
+  height: auto;
+} 
+
+.art img {
+  width: 100%;
+}
+
+#last-art {margin-bottom: 5em;}
+
+figcaption {
+    color: #000000;
+    font: smaller sans-serif;
+    padding: 3px;
+    text-align: left;
+}

@@ -1,0 +1,22 @@
+pre {
+    margin-top: -6px;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+iframe {
+    width: 1000px;
+    height: 800px;
+    margin: 0;
+    padding: 0;
+    border: #000 2pt solid;
+    overflow: no;
+    margin-top: 10px;
+}
+
+h5 {
+    text-align: center;
+    margin: -20px 100px 10px 100px;
+    font-size: medium;
+}
